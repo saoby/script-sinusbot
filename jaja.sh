@@ -12,6 +12,10 @@ cat << "EOF"
                                                               |_|        
 
 EOF
+function greenMessage() {
+  echo -e "\\033[32;1m${*}\\033[0m"
+}
+
 echo -n $'\E[37m'
 
 sleep 3s
