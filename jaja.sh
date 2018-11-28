@@ -47,10 +47,10 @@ chmod 777 ./sinusbot > /dev/null;
 export Q=$(su sinusbot -c './sinusbot --initonly')
 password=$(export | awk '/password/{ print $10 }' | tr -d "'")
 /etc/init.d/sinusbot start
-if [ -f /lib/systemd/system/sinusbot.service ]; then
-      service sinusbot restart
+if [ -f /etc/init.d/sinusbot ]; then
+  /etc/init.d/sinusbot restart
 echo -n $'\E[33m' "All right. Everything is installed successfully. SinusBot is UP on password = '$password'" 
-echo -n $'\E[35m'
+
 cat << "EOF"
 
    _____        ____  _ __     __            _____           _       _   
