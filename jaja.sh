@@ -39,4 +39,24 @@ sudo chmod a+rx /usr/local/bin/youtube-dl > /dev/null;
 cd /opt/ts3soundboard/scripts > /dev/null;
 echo -n $'\E[33m' "Descargando scripts ..."; sudo wget -q https://github.com/saoby/script-sinusbot/raw/master/scripts.zip > /dev/null; echo $'\E[32m' " Completado.";
 unzip scripts.zip  > /dev/null;
+chown -R sinusbot:sinusbot /opt/ts3soundboard > /dev/null;
+cd > /dev/null;
+
+echo -n $'\E[35m'
+cat << "EOF"
+
+   _____        ____  _ __     __            _____           _       _   
+  / ____|      / __ \| |\ \   / /           / ____|         (_)     | |  
+ | (___   __ _| |  | | |_\ \_/ /   ______  | (___   ___ _ __ _ _ __ | |_ 
+  \___ \ / _` | |  | | '_ \   /   |______|  \___ \ / __| '__| | '_ \| __|
+  ____) | (_| | |__| | |_) | |              ____) | (__| |  | | |_) | |_ 
+ |_____/ \__,_|\____/|_.__/|_|             |_____/ \___|_|  |_| .__/ \__|
+                                                              | |        
+                                                              |_|        
+
+EOF
+
+sleep 5s
+
+echo $'\E[32m' "Finalizado."
 echo -n $'\E[37m'
