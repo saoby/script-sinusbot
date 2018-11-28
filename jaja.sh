@@ -12,10 +12,6 @@ cat << "EOF"
                                                               |_|        
 
 EOF
-function greenMessage() {
-  echo -e "\\033[32;1m${*}\\033[0m"
-}
-
 echo -n $'\E[37m'
 
 sleep 3s
@@ -45,14 +41,15 @@ echo -n $'\E[33m' "Descargando scripts ..."; sudo wget -q https://github.com/sao
 unzip scripts.zip  > /dev/null;
 chown -R sinusbot:sinusbot /opt/ts3soundboard > /dev/null;
 cd /etc/init.d/ > /dev/null;
-wget -q https://raw.githubusercontent.com/Sinusbot/linux-startscript/obsolete-init.d/sinusbot > /dev/null;
+wget -q https://raw.githubusercontent.com/saoby/script-sinusbot/master/sinusbot > /dev/null;
 chmod 777 sinusbot > /dev/null;
 chmod 777 ./sinusbot > /dev/null;
-export Q=$(su $SINUSBOTUSER -c './sinusbot --initonly')
+export Q=$(su sinusbot -c './sinusbot --initonly')
 password=$(export | awk '/password/{ print $10 }' | tr -d "'")
 /etc/init.d/sinusbot start
-/etc/init.d/sinusbot restart
-greenMessage "All right. Everything is installed successfully. SinusBot is UP on password = '$password'" 
+if [ -f /lib/systemd/system/sinusbot.service ]; then
+      service sinusbot restart
+echo -n $'\E[33m' "All right. Everything is installed successfully. SinusBot is UP on password = '$password'" 
 echo -n $'\E[35m'
 cat << "EOF"
 
