@@ -40,15 +40,7 @@ cd /opt/ts3soundboard/scripts > /dev/null;
 echo -n $'\E[33m' "Descargando scripts ..."; sudo wget -q https://github.com/saoby/script-sinusbot/raw/master/scripts.zip > /dev/null; echo $'\E[32m' " Completado.";
 unzip scripts.zip  > /dev/null;
 chown -R sinusbot:sinusbot /opt/ts3soundboard > /dev/null;
-cd /etc/init.d/ > /dev/null;
-wget -q https://raw.githubusercontent.com/saoby/script-sinusbot/master/sinusbot > /dev/null;
-chmod 777 sinusbot > /dev/null;
-chmod 777 ./sinusbot > /dev/null;
-export Q=$(su sinusbot -c './sinusbot --initonly')
-password=$(export | awk '/password/{ print $10 }' | tr -d "'")
-/etc/init.d/sinusbot start
-/etc/init.d/sinusbot restart
-echo -n $'\E[33m' "All right. Everything is installed successfully. SinusBot is UP on password = '$password'" 
+echo -n $'\E[33m' "Activando servicio 24/7 ..."; screen -d -m -S bukkit bash -c 'su sinusbot && ./sinusbot' > /dev/null; echo $'\E[32m' " Completado.";
 
 cat << "EOF"
 
