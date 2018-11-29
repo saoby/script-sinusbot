@@ -39,6 +39,7 @@ sudo chmod a+rx /usr/local/bin/youtube-dl > /dev/null;
 cd /opt/ts3soundboard/scripts > /dev/null;
 echo -n $'\E[33m' "Descargando scripts ..."; sudo wget -q https://github.com/saoby/script-sinusbot/raw/master/scripts.zip > /dev/null; echo $'\E[32m' " Completado.";
 unzip scripts.zip  > /dev/null;
+cd /opt/ts3soundboard > /dev/null;
 chown -R sinusbot:sinusbot /opt/ts3soundboard > /dev/null;
 echo -n $'\E[33m' "Activando servicio 24/7 ..."; screen -d -m -S bukkit bash -c 'su sinusbot && ./sinusbot' > /dev/null; echo $'\E[32m' " Completado.";
 
