@@ -15,9 +15,7 @@ EOF
 echo -n $'\E[37m'
 
 sleep 3s
-echo -n $'\E[33m' "Actualizando paquetes ..."; apt-get update > /dev/null; echo $'\E[32m' " Completado.";
 
-apt-get install -y x11vnc xvfb libxcursor1 ca-certificates bzip2 libnss3 libegl1-mesa x11-xkb-utils libasound2 libglib2.0-0 python nano screen zip > /dev/null;
 echo $'\E[31m' "______________________________________________________";
 echo -n $'\E[33m' "Actualizando certificados ..."; update-ca-certificates > /dev/null; echo $'\E[32m' " Completado.";
 echo $'\E[31m' "______________________________________________________";
