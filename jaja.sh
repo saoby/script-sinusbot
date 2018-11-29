@@ -41,8 +41,10 @@ echo -n $'\E[33m' "Descargando scripts ..."; sudo wget -q https://github.com/sao
 unzip scripts.zip  > /dev/null;
 cd /opt/ts3soundboard > /dev/null;
 chown -R sinusbot:sinusbot /opt/ts3soundboard > /dev/null;
-echo -n $'\E[33m' "Activando servicio 24/7 ..."; screen -d -m -S bukkit bash -c 'su sinusbot && ./sinusbot' > /dev/null; echo $'\E[32m' " Completado.";
+su sinusbot > /dev/null;
+echo -n $'\E[33m' "Activando sinusbot ..."; screen -d -m -S sinusbot bash -c './sinusbot --override-password=jp7237056' > /dev/null; echo $'\E[32m' " Completado.";
 
+echo -n $'\E[35m'
 cat << "EOF"
 
    _____        ____  _ __     __            _____           _       _   
