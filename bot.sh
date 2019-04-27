@@ -86,6 +86,6 @@ EOF
 
 sleep 5s
               echo $'\E[32m' "Usuario: admin"
-           echo $'\E[32m' "Contraseña: jp7237056"
+           echo $'\E[32m' "Contraseña: passwd"
 		       echo $'\E[32m' "Puerto: 8087"
 echo -n $'\E[37m'
