@@ -68,7 +68,7 @@ chown -R sinusbot1:sinusbot1 /opt/ts3soundboard1 > /dev/null;
 cd /opt/ts3soundboard1 > /dev/null;
 rm /tmp/.sinusbot.lock > /dev/null;
 rm /tmp/.X11-unix/X40 > /dev/null;
-echo -n $'\E[33m' "Activando sinusbot ..."; screen -dmS sinusbot1 bash -c 'su sinusbot1 -c "./sinusbot --override-password=jp7237056"' > /dev/null; echo $'\E[32m' " Completado.";
+echo -n $'\E[33m' "Activando sinusbot ..."; screen -dmS sinusbot1 bash -c 'su sinusbot1 -c "./sinusbot --override-password=passwd"' > /dev/null; echo $'\E[32m' " Completado.";
 echo $'\E[30m' "______________________________________________________";
 echo -n $'\E[35m'
 cat << "EOF"
