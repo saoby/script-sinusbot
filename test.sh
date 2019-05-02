@@ -38,7 +38,8 @@ wget -q http://dl.4players.de/ts/releases/3.1.10/TeamSpeak3-Client-linux_amd64-3
 
 chmod 0755 TeamSpeak3-Client-linux_amd64-3.1.10.run > /dev/null;
 
-echo -n $'\E[31m' "Accion requerida!, presione(Q, Enter, Y, Enter)"; echo -n $'\E[30m' "123";./TeamSpeak3-Client-linux_amd64-3.1.10.run > /dev/null;
+echo -n $'\E[30m' "222222222222222222";echo -n $'\E[36m' "Intervenir      Intervenir";echo
+echo -n $'\E[30m' "123";./TeamSpeak3-Client-linux_amd64-3.1.10.run > /dev/null;
 
 
 rm TeamSpeak3-Client-linux_amd64/xcbglintegrations/libqxcb-glx-integration.so > /dev/null;
@@ -75,7 +76,9 @@ screen -dmS sinusbot1 bash -c 'su sinusbot1 -c "./sinusbot --override-password=p
 echo -n $'\E[37m' "22";
 
 ip=$(curl -s https://api.ipify.org)
-echo -n $'\E[30m' "222222222222222222";echo "Panel: $ip:8087"
-echo -n $'\E[30m' "2222222222222222";echo "Usuario: admin"
-echo -n $'\E[30m' "2222222222222";echo "Contraseña: passwd"
+echo -n $'\E[30m' "222222222222222222";echo -n $'\E[37m' "Panel: $ip:8087";echo
+echo -n $'\E[30m' "2222222222222222";echo -n $'\E[37m' "Usuario: admin";echo
+echo -n $'\E[30m' "2222222222222";echo -n $'\E[37m' "Contraseña: passwd";echo
+
+echo
 
