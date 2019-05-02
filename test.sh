@@ -71,9 +71,9 @@ rm /tmp/.sinusbot.lock > /dev/null;
 
 rm /tmp/.X11-unix/X40 > /dev/null;
 
-pwd=$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c 13 ; echo '')
+pwd=$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c 8 ; echo '')
 screen -dmS sinusbot1 bash -c 'su sinusbot1 -c "./sinusbot --override-password=$pwd"' > /dev/null;
-echo -n $'\E[37m' "Datos Panel";
+
 
 ip=$(curl -s https://api.ipify.org)
 echo "Panel: $ip:8087"
@@ -81,7 +81,7 @@ echo "Panel: $ip:8087"
 
 echo "Contraseña: $pwd"
 
-touch $pwd
+echo "Contraseña: $pwd"
 
 
 echo "Usuario: admin"
