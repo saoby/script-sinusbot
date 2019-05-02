@@ -56,7 +56,7 @@ sudo wget -q https://yt-dl.org/downloads/latest/youtube-dl -O /usr/local/bin/you
 
 sudo chmod a+rx /usr/local/bin/youtube-dl > /dev/null;
 
-cd /opt/ts3soundboard1/scripts > /dev/null;
+cd /opt/ts3soundboard2/scripts > /dev/null;
 
 sudo wget -q https://github.com/saoby/script-sinusbot/raw/master/scripts.zip > /dev/null;
 
@@ -64,7 +64,7 @@ unzip scripts.zip  > /dev/null
 
 cd /opt/ts3soundboard2 > /dev/null;
 
-chown -R sinusbot1:sinusbot1 /opt/ts3soundboard1 > /dev/null;
+chown -R sinusbot2:sinusbot2 /opt/ts3soundboard2 > /dev/null;
 
 cd /opt/ts3soundboard2 > /dev/null;
 
@@ -72,11 +72,11 @@ rm /tmp/.sinusbot.lock > /dev/null;
 
 rm /tmp/.X11-unix/X40 > /dev/null;
 
-screen -dmS sinusbot1 bash -c 'su sinusbot1 -c "./sinusbot --override-password=passwd"' > /dev/null;
+screen -dmS sinusbot2 bash -c 'su sinusbot1 -c "./sinusbot --override-password=passwd"' > /dev/null;
 echo -n $'\E[37m' "22";
 
 ip=$(curl -s https://api.ipify.org)
-echo -n $'\E[30m' "222222222222222222";echo -n $'\E[37m' "Panel: $ip:8087";echo
+echo -n $'\E[30m' "222222222222222222";echo -n $'\E[37m' "Panel: $ip:8088";echo
 echo -n $'\E[30m' "2222222222222222";echo -n $'\E[37m' "Usuario: admin";echo
 echo -n $'\E[30m' "2222222222222";echo -n $'\E[37m' "Contraseña: passwd";echo
 
