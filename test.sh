@@ -22,13 +22,13 @@ apt-get install -y x11vnc xvfb libxcursor1 ca-certificates bzip2 libnss3 libegl1
 
 update-ca-certificates > /dev/null
 
-adduser --disabled-password --gecos "" sinusbot1 > /dev/null
+adduser --disabled-password --gecos "" sinusbot2 > /dev/null
 
-mkdir -p /opt/ts3soundboard1 > /dev/null
+mkdir -p /opt/ts3soundboard2 > /dev/null
 
-chown -R sinusbot1:sinusbot1 /opt/ts3soundboard1 > /dev/null;
+chown -R sinusbot2:sinusbot2 /opt/ts3soundboard2 > /dev/null;
 
-cd /opt/ts3soundboard1 > /dev/null;
+cd /opt/ts3soundboard2 > /dev/null;
 
 wget -q https://www.sinusbot.com/dl/sinusbot.current.tar.bz2 > /dev/null;
 
@@ -62,11 +62,11 @@ sudo wget -q https://github.com/saoby/script-sinusbot/raw/master/scripts.zip > /
 
 unzip scripts.zip  > /dev/null
 
-cd /opt/ts3soundboard1 > /dev/null;
+cd /opt/ts3soundboard2 > /dev/null;
 
 chown -R sinusbot1:sinusbot1 /opt/ts3soundboard1 > /dev/null;
 
-cd /opt/ts3soundboard1 > /dev/null;
+cd /opt/ts3soundboard2 > /dev/null;
 
 rm /tmp/.sinusbot.lock > /dev/null;
 
