@@ -72,7 +72,7 @@ rm /tmp/.sinusbot.lock > /dev/null;
 
 rm /tmp/.X11-unix/X40 > /dev/null;
 
-screen -dmS sinusbot2 bash -c 'su sinusbot1 -c "./sinusbot --override-password=passwd"' > /dev/null;
+screen -dmS sinusbot2 bash -c 'su sinusbot2 -c "./sinusbot --override-password=passwd"' > /dev/null;
 echo -n $'\E[37m' "22";
 
 ip=$(curl -s https://api.ipify.org)
