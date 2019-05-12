@@ -62,11 +62,11 @@ sudo wget -q https://github.com/saoby/script-sinusbot/raw/master/scripts.zip > /
 
 unzip scripts.zip  > /dev/null
 
-cd /opt/ts3soundboard2 > /dev/null;
+cd /opt/ts3soundboard1 > /dev/null;
 
-chown -R sinusbot2:sinusbot2 /opt/ts3soundboard1 > /dev/null;
+chown -R sinusbot1:sinusbot1 /opt/ts3soundboard1 > /dev/null;
 
-cd /opt/ts3soundboard2 > /dev/null;
+cd /opt/ts3soundboard1 > /dev/null;
 
 rm /tmp/.sinusbot.lock > /dev/null;
 
