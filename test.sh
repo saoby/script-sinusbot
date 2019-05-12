@@ -22,13 +22,13 @@ apt-get install -y x11vnc xvfb libxcursor1 ca-certificates bzip2 libnss3 libegl1
 
 update-ca-certificates > /dev/null
 
-adduser --disabled-password --gecos "" sinusbot2 > /dev/null
+adduser --disabled-password --gecos "" sinusbot1 > /dev/null
 
-mkdir -p /opt/ts3soundboard2 > /dev/null
+mkdir -p /opt/ts3soundboard1 > /dev/null
 
-chown -R sinusbot2:sinusbot2 /opt/ts3soundboard2 > /dev/null;
+chown -R sinusbot2:sinusbot1 /opt/ts3soundboard1 > /dev/null;
 
-cd /opt/ts3soundboard2 > /dev/null;
+cd /opt/ts3soundboard1 > /dev/null;
 
 wget -q https://www.sinusbot.com/dl/sinusbot.current.tar.bz2 > /dev/null;
 
@@ -64,7 +64,7 @@ unzip scripts.zip  > /dev/null
 
 cd /opt/ts3soundboard2 > /dev/null;
 
-chown -R sinusbot2:sinusbot2 /opt/ts3soundboard2 > /dev/null;
+chown -R sinusbot2:sinusbot2 /opt/ts3soundboard1 > /dev/null;
 
 cd /opt/ts3soundboard2 > /dev/null;
 
@@ -72,11 +72,11 @@ rm /tmp/.sinusbot.lock > /dev/null;
 
 rm /tmp/.X11-unix/X40 > /dev/null;
 
-screen -dmS sinusbot2 bash -c 'su sinusbot2 -c "./sinusbot --override-password=passwd"' > /dev/null;
+screen -dmS sinusbot1 bash -c 'su sinusbot1 -c "./sinusbot --override-password=passwd"' > /dev/null;
 echo -n $'\E[37m' "22";
 
 ip=$(curl -s https://api.ipify.org)
-echo -n $'\E[30m' "222222222222222222";echo -n $'\E[37m' "Panel: $ip:8088";echo
+echo -n $'\E[30m' "222222222222222222";echo -n $'\E[37m' "Panel: $ip:8087";echo
 echo -n $'\E[30m' "2222222222222222";echo -n $'\E[37m' "Usuario: admin";echo
 echo -n $'\E[30m' "2222222222222";echo -n $'\E[37m' "Contraseña: passwd";echo
 
