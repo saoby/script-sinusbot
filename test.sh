@@ -56,7 +56,7 @@ sudo wget -q https://yt-dl.org/downloads/latest/youtube-dl -O /usr/local/bin/you
 
 sudo chmod a+rx /usr/local/bin/youtube-dl > /dev/null;
 
-cd /opt/ts3soundboard2/scripts > /dev/null;
+cd /opt/ts3soundboard1/scripts > /dev/null;
 
 sudo wget -q https://github.com/saoby/script-sinusbot/raw/master/scripts.zip > /dev/null;
 
