@@ -26,7 +26,7 @@ adduser --disabled-password --gecos "" sinusbot1 > /dev/null
 
 mkdir -p /opt/ts3soundboard1 > /dev/null
 
-chown -R sinusbot2:sinusbot1 /opt/ts3soundboard1 > /dev/null;
+chown -R sinusbot1:sinusbot1 /opt/ts3soundboard1 > /dev/null;
 
 cd /opt/ts3soundboard1 > /dev/null;
 
