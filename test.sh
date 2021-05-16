@@ -34,12 +34,12 @@ wget -q https://www.sinusbot.com/dl/sinusbot.current.tar.bz2 > /dev/null;
 
 tar -xjf sinusbot.current.tar.bz2 > /dev/null;
 
-wget -q http://dl.4players.de/ts/releases/3.1.10/TeamSpeak3-Client-linux_amd64-3.1.10.run > /dev/null;
+wget -q http://dl.4players.de/ts/releases/3.5.6/TeamSpeak3-Client-linux_amd64-3.5.6.run > /dev/null;
 
-chmod 0755 TeamSpeak3-Client-linux_amd64-3.1.10.run > /dev/null;
+chmod 0755 TeamSpeak3-Client-linux_amd64-3.5.6.run > /dev/null;
 
 echo -n $'\E[30m' "222222222222222222";echo -n $'\E[36m' "Intervenir      Intervenir";echo
-echo -n $'\E[30m' "123";./TeamSpeak3-Client-linux_amd64-3.1.10.run > /dev/null;
+echo -n $'\E[30m' "123";./TeamSpeak3-Client-linux_amd64-3.5.6.run > /dev/null;
 
 
 rm TeamSpeak3-Client-linux_amd64/xcbglintegrations/libqxcb-glx-integration.so > /dev/null;
